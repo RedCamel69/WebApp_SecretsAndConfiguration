@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@inject IConfiguration config
+@{
+    ViewData["Title"] = "Home page";
+    ViewBag.Secret1 = config["CodeExampleSecret1"];
+    ViewBag.AppSetting1 = config["ApplicationSetting1"];
+    ViewBag.AppConfigurationExample1 = config["AppConfigurationExample1"];    
+    ViewBag.AppConfigurationExample2 = config["AppConfigurationExample2"];
+    ViewBag.SettingUnqueToAppsettings = config["SettingUnqueToAppsettings"];
+}
+
+<div class="text-center">
+    <h1 class="display-4">Secrets And Configurations</h1>
+    
+    <ul style = "list-style:none">
+        <li><strong>Secret 1 : </strong>@ViewBag.Secret1</li>
+         <li><strong>AppSetting 1 : </strong>@ViewBag.AppSetting1</li>
+         <li><strong>Application Config 1 : </strong>@ViewBag.AppConfigurationExample1</li>
+         <li><strong>Application Config 2 :  </strong>@ViewBag.AppConfigurationExample2</li>
+         <li><strong>SettingUnqueToAppsettings : </strong>@ViewBag.SettingUnqueToAppsettings</li>
+    </ul>
+    
+</div>
+
+
