@@ -27,5 +27,6 @@ Steps For App Configuration Service
 4 In Program.cs connect to your CodeExamplesAppConfiguration using the connection string - embed in test for env to facillitate switch between local / hosted
 5 Common named key values will have following order of precedence:
 		app config service
+		key vault
 		application settings
 		appsettings.json
